@@ -22,6 +22,8 @@ body {
   background-color: #4d4d4d;
   position: relative;
   border-bottom: 0.5px solid gray;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
 }
 
     .nav > .nav-header {
