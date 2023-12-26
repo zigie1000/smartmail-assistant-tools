@@ -39,7 +39,7 @@ body {
 }
     .nav > .nav-header > .nav-icon {
      /* border-radius: 50px;*/
-      border-top-left-radius: 50px;
+      border-top-left-radius: 50% 50%;
   /*    border-top-right-radius: 50px;
       border-bottom-left-radius: 20px;
       border-bottom-right-radius: 20px;*/
