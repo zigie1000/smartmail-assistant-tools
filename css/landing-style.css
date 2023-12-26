@@ -37,12 +37,11 @@ body {
   color: #fff;
   padding: 10px 10px 10px 10px;
 }
-    .nav > .nav-header > .nav-icon {
-     /* border-radius: 50px;*/
-      border-top-left-radius: 50% 50%;
-  /*    border-top-right-radius: 50px;
-      border-bottom-left-radius: 20px;
-      border-bottom-right-radius: 20px;*/
+    .nav > .nav-header > .nav-icon {   
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
       border: 0.5px solid gray;
       object-fit: cover;
       margin-right: 10px; /* Adjust the margin as needed */
