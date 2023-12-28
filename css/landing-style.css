@@ -42,8 +42,8 @@ body {
       border: 0.5px solid gray;
       object-fit: cover;
       margin-right: -3px;
-      width: "20"; 
-      height:"20";
+      width: "20px"; 
+      height:"20px";
     }
 
 .nav > .nav-btn {
