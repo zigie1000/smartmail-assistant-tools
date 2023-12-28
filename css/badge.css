@@ -1,0 +1,69 @@
+.green-badge {
+  padding-top: 0.125rem;
+padding-bottom: 0.125rem; 
+padding-left: 0.625rem;
+padding-right: 0.625rem; 
+border-radius: 0.25rem;
+border: 1px solid #05ed28;
+font-size: 0.7em;
+line-height: 1rem; 
+font-weight: 500; 
+color: #05ed28; 
+background-color: rgba(5, 237, 40, 0.19);
+}
+
+.red-badge {
+padding-top: 0.125rem;
+padding-bottom: 0.125rem; 
+padding-left: 0.625rem;
+padding-right: 0.625rem; 
+border-radius: 0.25rem;
+border: 1px solid #ff2121;
+font-size: 0.7em;
+line-height: 1rem; 
+font-weight: 500; 
+color: #ff2121; 
+background-color: rgba(255, 33, 33, 0.19); 
+}
+
+.gold-badge {
+padding-top: 0.125rem;
+padding-bottom: 0.125rem; 
+padding-left: 0.625rem;
+padding-right: 0.625rem; 
+border-radius: 0.25rem;
+border: 1px solid #f2c71b;
+font-size: 0.7em;
+line-height: 1rem; 
+font-weight: 500; 
+color: #f2c71b; 
+background-color: rgb(242, 199, 27, 0.19); 
+}
+
+.yellow-badge {
+padding-top: 0.125rem;
+padding-bottom: 0.125rem; 
+padding-left: 0.625rem;
+padding-right: 0.625rem; 
+border-radius: 0.25rem;
+border: 1px solid #ffff00;
+font-size: 0.7em;
+line-height: 1rem; 
+font-weight: 500; 
+color: #ffff00; 
+background-color: rgba(255, 255, 0, 0.19); 
+}
+.pink-badge {
+padding-top: 0.125rem;
+padding-bottom: 0.125rem; 
+padding-left: 0.625rem;
+padding-right: 0.625rem; 
+border-radius: 0.25rem;
+border: 1px solid #fc03b1;
+font-size: 0.7em;
+line-height: 1rem; 
+font-weight: 500; 
+color: #fc03b1; 
+background-color: rgba(252, 3, 177, 0.19); 
+  /*252, 3, 177   #fc03b1*/
+  }
