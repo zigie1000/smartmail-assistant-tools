@@ -58,7 +58,7 @@
 <span style="font-size: 1em; color: white; margin-left: 4px; margin-top: 14px;">Your Prompt: </span>
   <textarea style="margin-top: 4px; width: 90%; height: 200px; background-color: transparent; color: white; border: 1px solid gray; border-radius: 10px; padding: 16px; outline: none;"></textarea>
   <br>
-  <button style="margin-top: 10px; width: 70%; height: 3em; background-color: gray; color: black; font-size: 2em; border-radius: 12px; border: 1px gold solid; margin-bottom: 18px;">
+  <button onclick="generate" style="margin-top: 10px; width: 70%; height: 3em; background-color: gray; color: black; font-size: 2em; border-radius: 12px; border: 1px gold solid; margin-bottom: 18px;">
   GENERATE CODE  
   </button>
 </div>
@@ -100,8 +100,17 @@
 
 Feel free to customize these FAQs to better suit the specifics of your AI code generator and the concerns your users might have.</span><br> 
   <div class="line"></div> <br>
-  
-  
+ 
+  <footer id="footer" style="background-color: #333; color: #fff; text-align: center; padding: 10px; bottom: 0; width: 100%;">
+        <p>&copy; 2023 Your Website. All rights reserved.</p>
+  <a href="/privacy-policy" style="color: #fff;">Privacy Policy</a>
+    </footer>
+  <script>
+    function generate(){
+      console.log('clicked');
+    }
+    
+  </script>
   
   <script type="application/ld+json">
 {
@@ -120,9 +129,5 @@ Feel free to customize these FAQs to better suit the specifics of your AI code g
 }
   </script>
   
-  <footer id="footer" style="background-color: #333; color: #fff; text-align: center; padding: 10px; bottom: 0; width: 100%;">
-        <p>&copy; 2023 Your Website. All rights reserved.</p>
-  <a href="/privacy-policy" style="color: #fff;">Privacy Policy</a>
-    </footer>
 </body>
   </html>
