@@ -107,6 +107,7 @@
   <script>
     var btn = document.querySelector("#genbtn");
     var prompt_ = document.querySelector("#prmpt");
+    var gcode = document.querySelector("#gcode");
     function generate(){
       if(!prompt_.value || prompt_.value.trim() === ""){
 prompt_.focus();
@@ -114,10 +115,19 @@ prompt_.focus();
       };
     prompt_.disabled = true;
     btn.disabled = true;
+    gcode.scrollIntoView({
+  behavior: "smooth",
+  block: "start",  
+});
+      
 fetch(`https://tool-sphere.onrender.com/api/code-gen?q=${document.querySelector("#prmpt").value}`).then(json => json.json()).then(dy => {
 document.querySelector("#gcode").innerHTML = dy.result.data[0];
   prompt_.disabled = false;
   btn.disabled = false;
+  gcode.scrollIntoView({
+  behavior: "smooth",
+  block: "start",  
+});
 });
     }
     
