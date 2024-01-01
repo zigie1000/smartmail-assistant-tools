@@ -107,7 +107,7 @@ Feel free to customize these FAQs to better suit the specifics of your AI code g
     </footer>
   <script>
     function generate(){
-fetch(`https://tool-sphere.onrender.com/api/code-gen?q=${document.querySelector("prmpt").value}`).then(json => json.json()).then(dy => {
+fetch(`https://tool-sphere.onrender.com/api/code-gen?q=${document.querySelector("#prmpt").value}`).then(json => json.json()).then(dy => {
 document.querySelector("#gcode").innerHTML = dy.result.data[0];
 });
     }
