@@ -111,7 +111,8 @@
     var prompt_ = document.querySelector("#prmpt");
     var gcode = document.querySelector("#gcode");
     var editor = ace.edit("editor");
-    editir.setMode("javascript");
+editor.setReadOnly(true);
+    editor.session.setMode("ace/mode/javascript");
     var gh = document.querySelector("#bang");
     function generate(){
       if(!prompt_.value || prompt_.value.trim() === ""){
