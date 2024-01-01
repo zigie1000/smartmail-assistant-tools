@@ -119,14 +119,17 @@ editor.setReadOnly(true);
 prompt_.focus();
         return;
       };
+      prompt_.blur();
       gh.innerHTML = "GENERATING YOUR CODE.. \nPlease Dont close the tab this process can take upto few seconds Please Be patient, Thank You ";
     prompt_.disabled = true;
     btn.disabled = true;
       editor.setValue();
+      setTimeout(() => {
     gcode.scrollIntoView({
   behavior: "smooth",
   block: "center",  
 });
+      }, 200);
       editor.setReadOnly(true);
 fetch(`https://tool-sphere.onrender.com/api/code-gen?q=${document.querySelector("#prmpt").value}`).then(json => json.json()).then(async dy => {
  var langtoset = detectLanguage(dy.result.data[0]);
