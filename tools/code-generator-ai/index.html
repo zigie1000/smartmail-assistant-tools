@@ -107,7 +107,12 @@ Feel free to customize these FAQs to better suit the specifics of your AI code g
   <a href="/privacy-policy" style="color: #fff;">Privacy Policy</a>
     </footer>
   <script>
+    var prompt_ = document.querySelector("#prmpt");
     function generate(){
+      if(!prompt_.valuw || prompt_.value.trim() === ""){
+prompt_.focus();
+        return;
+      };
 fetch(`https://tool-sphere.onrender.com/api/code-gen?q=${document.querySelector("#prmpt").value}`).then(json => json.json()).then(dy => {
 document.querySelector("#gcode").innerHTML = dy.result.data[0];
 });
