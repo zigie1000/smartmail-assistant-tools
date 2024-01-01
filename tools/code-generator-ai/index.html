@@ -19,7 +19,7 @@
 <meta name="msapplication-config" content="/icons/browserconfig.xml">
 <meta name="theme-color" content="#ffffff">
   <link rel="canonical" href="https://tool-sphere.github.io/" />
-  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.32.3/ace.js"></script>
 </head>
 
 <body>
@@ -68,7 +68,7 @@
   <span style="display: block; font-size: 3em; color: white; margin-left: 10px; margin-top: 3em; margin-bottom: 7px;"> Generated Code: </span>
   <div id="gcode" style="margin-top: 10px; margin: 0 auto; width: 100%; border: 1px solid green; border-radius: 4px; display: flex;">
     <span id="bang" style="display: block; font-size: 22px; color: white; margin-left: 8px; margin-top: 4px; margin-bottom: 12px;">Bang test</span> <br>
-    <div id="editor" style="width: 90%; margin: 0 auto; height: 10em;"></div>
+    <div id="editor" style="width: 90%; margin: 0 auto; height: 70%;"></div>
   </div>
 
 
@@ -109,6 +109,7 @@
     var btn = document.querySelector("#genbtn");
     var prompt_ = document.querySelector("#prmpt");
     var gcode = document.querySelector("#gcode");
+    var editor = ace.edit("editor");
     function generate(){
       if(!prompt_.value || prompt_.value.trim() === ""){
 prompt_.focus();
@@ -122,7 +123,8 @@ prompt_.focus();
 });
       
 fetch(`https://tool-sphere.onrender.com/api/code-gen?q=${document.querySelector("#prmpt").value}`).then(json => json.json()).then(dy => {
-document.querySelector("#gcode").innerHTML = dy.result.data[0];
+//document.querySelector("#gcode").innerHTML = dy.result.data[0];
+  editor.setValue = by.result.data[0];
   prompt_.disabled = false;
   btn.disabled = false;
   gcode.scrollIntoView({
