@@ -113,6 +113,7 @@ prompt_.focus();
       };
 fetch(`https://tool-sphere.onrender.com/api/code-gen?q=${document.querySelector("#prmpt").value}`).then(json => json.json()).then(dy => {
 document.querySelector("#gcode").innerHTML = dy.result.data[0];
+  prompt_.disabled = true;
 });
     }
     
