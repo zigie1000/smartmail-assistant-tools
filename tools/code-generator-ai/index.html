@@ -122,17 +122,18 @@ prompt_.focus();
       gh.innerHTML = "GENERATING YOUR CODE.. \nPlease Dont close the tab this process can take upto few seconds Please Be patient, Thank You ";
     prompt_.disabled = true;
     btn.disabled = true;
+      editor.setValue();
     gcode.scrollIntoView({
   behavior: "smooth",
   block: "center",  
 });
-      
+      editor.setReadOnly(true);
 fetch(`https://tool-sphere.onrender.com/api/code-gen?q=${document.querySelector("#prmpt").value}`).then(json => json.json()).then(async dy => {
   editor.setValue(dy.result.data[0]);
   prompt_.disabled = false;
   btn.disabled = false;
   gh.innerHTML = "Your Code Generated Successfully, Thanks For using out Tool";
-  
+  editor.setReadOnly(false);
   gcode.scrollIntoView({
   behavior: "smooth",
   block: "center",  
