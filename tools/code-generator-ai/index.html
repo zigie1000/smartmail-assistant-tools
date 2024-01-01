@@ -21,6 +21,7 @@
 <meta name="theme-color" content="#ffffff">
   <link rel="canonical" href="https://tool-sphere.github.io/" />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.32.3/ace.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/highlight.min.js"></script>
 </head>
 
 <body>
@@ -112,7 +113,6 @@
     var gcode = document.querySelector("#gcode");
     var editor = ace.edit("editor");
 editor.setReadOnly(true);
-    editor.session.setMode("ace/mode/javascript");
     var gh = document.querySelector("#bang");
     function generate(){
       if(!prompt_.value || prompt_.value.trim() === ""){
@@ -129,6 +129,10 @@ prompt_.focus();
 });
       editor.setReadOnly(true);
 fetch(`https://tool-sphere.onrender.com/api/code-gen?q=${document.querySelector("#prmpt").value}`).then(json => json.json()).then(async dy => {
+ var langtoset = detectLanguage(dy.result.data[0]);
+  if(langtoset){
+   editor.session.setMode(`ace/mode/${langtoset}`);
+  }  
   editor.setValue(dy.result.data[0]);
   prompt_.disabled = false;
   btn.disabled = false;
@@ -140,7 +144,10 @@ fetch(`https://tool-sphere.onrender.com/api/code-gen?q=${document.querySelector(
 });
 });
     }
-    
+function detectLanguage(code) {
+    var result = hljs.highlightAuto(code);
+    return result.language;
+}    
   </script>
   
   <script type="application/ld+json">
