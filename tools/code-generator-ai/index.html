@@ -58,14 +58,14 @@
 <span style="font-size: 1em; color: white; margin-left: 4px; margin-top: 14px;">Your Prompt: </span>
   <textarea placeholder="Enter What You want to Generate" id="prmpt" style="margin-top: 4px; width: 90%; height: 200px; background-color: transparent; color: white; border: 1px solid gray; border-radius: 10px; padding: 16px; outline: none;"></textarea>
   <br>
-  <button onclick="generate()" style="margin-top: 10px; width: 70%; height: 3em; background-color: transparent; color: black; font-size: 2em; border-radius: 12px; border: 1px gold solid; margin-bottom: 18px;
+  <button id="genbtn" onclick="generate()" style="margin-top: 10px; width: 70%; height: 3em; background-color: transparent; color: black; font-size: 2em; border-radius: 12px; border: 1px gold solid; margin-bottom: 18px;
     box-shadow: rgba(69, 192, 245, 0.25) 0px 30px 60px -12px inset, rgba(69, 192, 245, 0.3) 0px 18px 36px -18px inset; color: white;">
   GENERATE CODE  
   </button>
 </div>
 
 
-  <span style="font-size: 3em; color: white; margin-left: 10px; margin-top: 3em; margin-bottom: 1em;"> Generated Code: </span>
+  <span style="font-size: 3em; color: white; margin-left: 10px; margin-top: 10em; margin-bottom: 1em;"> Generated Code: </span>
   <div id="gcode" style="margin-top: 10px; margin: 0 auto; width: 100%; border: 1px solid green; border-radius: 4px;">
     
   </div>
@@ -105,15 +105,19 @@
   <a href="/privacy-policy" style="color: #fff;">Privacy Policy</a>
     </footer>
   <script>
+    var btn = document.querySelector("#genbtn");
     var prompt_ = document.querySelector("#prmpt");
     function generate(){
       if(!prompt_.value || prompt_.value.trim() === ""){
 prompt_.focus();
         return;
       };
+    prompt_.disabled = true;
+    btn.disabled = true;
 fetch(`https://tool-sphere.onrender.com/api/code-gen?q=${document.querySelector("#prmpt").value}`).then(json => json.json()).then(dy => {
 document.querySelector("#gcode").innerHTML = dy.result.data[0];
-  prompt_.disabled = true;
+  prompt_.disabled = false;
+  btn.disabled = false;
 });
     }
     
