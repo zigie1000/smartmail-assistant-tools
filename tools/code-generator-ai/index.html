@@ -31,6 +31,7 @@
   height: 50px;
   display: flex;
   align-items: center;
+  margin: 0 auto;
 }
 .obj {
   width: 6px;
@@ -123,7 +124,7 @@
 <br>
 
   <span style="display: block; font-size: 3em; color: white; margin-left: 10px; margin-top: 3em; margin-bottom: 7px;"> Generated Code: </span>
-  <div id="gcode" style="margin-top: 10px; margin: 0 auto; width: 100%; border: 1px solid green; border-radius: 4px; display: block;">
+  <div id="gcode" style="margin-top: 10px; margin: 0 auto; width: 100%; border: 1px solid green; border-radius: 4px; display: flex;">
     <span id="bang" style="display: block; font-size: 22px; color: green; margin-left: 8px; margin-top: 4px; margin-bottom: 12px;">Generate Your Code now</span> <br>
     
   </div>
@@ -175,7 +176,7 @@ prompt_.focus();
         return;
       };
       prompt_.blur();
-      gh.innerHTML = "GENERATING YOUR CODE.. <br> Please Dont close the tab this process can take upto 10 seconds Please Be patient, Thank You <br> <div class='loading'><div class='obj'></div></div>";
+      gh.innerHTML = "GENERATING YOUR CODE.. <br> Please Dont close the tab this process can take upto 10 seconds Please Be patient, Thank You <br> <div style='margin-top: 8px;' class='loading'><div class='obj'></div><div class='obj'></div><div class='obj'></div><div class='obj'></div><div class='obj'></div><div class='obj'></div><div class='obj'></div><div class='obj'></div></div>";
     prompt_.disabled = true;
     btn.disabled = true;
       editor.setValue();
