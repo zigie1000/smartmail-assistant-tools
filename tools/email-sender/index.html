@@ -172,7 +172,9 @@ border-color: gold;
   <span style="margin-top: 10px; margin-bottom: 5px; font-size: 20px;">API Key: <a target="_blank" href="https://rapidapi.com/sujoyk211/api/mail-sender-api1/" style="font-size: 12px; color: gold;">Click To get API key for free</a></span>
    <textarea maxlength="100" placeholder="YourSuperSecretAPIKey**" id="apikey" type="password" style="margin-top: 4px; width: 90%; height: 33px; background-color: transparent; color: white; border: 1px solid gray; border-radius: 10px; padding: 8px; outline: none;"></textarea>
 <br>
-  <button class="button-88" role="button">Send Email</button>
+  <div id="result"></div>
+  <br>
+  <button class="button-88" role="button" onclick="sendEmail()" id="sendBtn">Send Email</button>
 </div>
   <div style="margin-top: 5px; margin-bottom: 5px;" class="line"></div>
 
@@ -226,5 +228,20 @@ border-color: gold;
   <a href="/about-us" style="color: #fff;">About Us</a> <br><br>
   <a href="/contact-us" style="color: #fff;">Contact Us</a> <br><br>
     </footer>
+  <script>
+      var sndbtn = document.querySelector("#sendBtn");
+  var result = document.querySelector("#result");
+    
+function sendEmail() {
+var sendto = document.querySelector("#sendto"),
+  title = document.querySelector("#title"),
+  body = document.querySelector("#body"),
+  key = document.querySelector("#apikey");  
+  if(sendto.trim() === ""){
+result.innerHTML = "<span style='color: red; font-size: 12px;'>Provide A Valid Email To Send</span>";
+  }
+}
+    
+  </script>
 </body>
   </html>
