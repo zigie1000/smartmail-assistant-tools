@@ -233,11 +233,11 @@ border-color: gold;
   var result = document.querySelector("#result");
     
 function sendEmail() {
-var sendto = document.querySelector("#sendto"),
-  title = document.querySelector("#title"),
-  body = document.querySelector("#body"),
-  key = document.querySelector("#apikey");  
-  if(sendto.trim() === ""){
+var sendto = document.querySelector("#sendto").value,
+  title = document.querySelector("#title").value,
+  body = document.querySelector("#body").value,
+  key = document.querySelector("#apikey").value;  
+  if(sendto.trim() === "" || sendto.toLowerCase().match(/^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/) == null){
 result.innerHTML = "<span style='color: #ff0505; font-size: 12px;'>Provide A Valid Email To Send</span>";
   }
 }
