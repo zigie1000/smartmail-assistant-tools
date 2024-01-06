@@ -241,7 +241,10 @@ var sendto = document.querySelector("#sendto").value,
 result.innerHTML = "<span style='color: #ff0505; font-size: 12px;'>Provide A Valid Email To Send</span>";
   }
 }
-    
+   window.addEventListener('input', function(event) {
+ if (event.target.tagName === 'TEXTAREA') {
+ result.innerHTML = "";
+ } 
   </script>
 </body>
   </html>
