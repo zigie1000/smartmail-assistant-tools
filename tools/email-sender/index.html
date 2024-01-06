@@ -79,6 +79,33 @@ background-color: rgba(255, 255, 255, 0.7); /* transparent white */
     background-color: transparent;
 border-color: gold;
   }
+.button-88 {
+  display: flex;
+  align-items: center;
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 16px;
+  padding: 0.7em 1.4em 0.7em 1.1em;
+  color: white;
+  background: #ad5389;
+  background: linear-gradient(0deg, rgba(20,167,62,1) 0%, rgba(102,247,113,1) 100%);
+  border: none;
+  box-shadow: 0 0.7em 1.5em -0.5em #14a73e98;
+  letter-spacing: 0.05em;
+  border-radius: 20em;
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-88:hover {
+  box-shadow: 0 0.5em 1.5em -0.5em #14a73e98;
+}
+
+.button-88:active {
+  box-shadow: 0 0.3em 1em -0.5em #14a73e98;
+  }
 </style>
 </head>
 
@@ -141,7 +168,7 @@ border-color: gold;
   <span style="margin-top: 10px; margin-bottom: 5px; font-size: 20px;">API Key: <a target="_blank" href="https://rapidapi.com/sujoyk211/api/mail-sender-api1/" style="font-size: 12px; color: gold;">Click To get API key fir free</a></span>
    <textarea maxlength="100" placeholder="YourSuperSecretAPIKeyDontShare" id="apikey" style="margin-top: 4px; width: 90%; height: 140px; background-color: transparent; color: white; border: 1px solid gray; border-radius: 10px; padding: 16px; outline: none;"></textarea>
 <br>
-  
+  <button class="button-88" role="button">Send Email</button>
 </div>
   <div style="margin-top: 5px; margin-bottom: 5px;" class="line"></div>
 
