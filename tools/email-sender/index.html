@@ -238,9 +238,23 @@ var sendto = document.querySelector("#sendto").value,
   body = document.querySelector("#body").value,
   key = document.querySelector("#apikey").value,  
   type = document.querySelector('input[name="toption"]:checked').value;
-  console.log(type);
+
   if(sendto.trim() === "" || sendto.toLowerCase().match(/^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/) == null){
-result.innerHTML = "<span style='color: #ff0505; font-size: 12px;'>Provide A Valid Email To Send</span>";
+return result.innerHTML = "<span style='color: #ff0505; font-size: 12px;'>Provide A Valid Email To Send</span>";
+  }
+  if(title.trim() === ""){
+return result.innerHTML = "<span style='color: #ff0505; font-size: 12px;'>Provide A Email Title</span>";
+  }
+  if(body.trim() === ""){
+return result.innerHTML = "<span style='color: #ff0505; font-size: 12px;'>Provide A Email Body</span>";
+  }
+  if(key.trim() === ""){
+return result.innerHTML = "<span style='color: #ff0505; font-size: 12px;'>Provide Your API token , Get your API token from => https://rapidapi.com/sujoyk211/api/mail-sender-api1/</span>";
+  }
+  if(type == "html"{
+var ishtml = true;
+  }else{
+var ishtml = false;
   }
 }
    window.addEventListener('input', function(event) {
