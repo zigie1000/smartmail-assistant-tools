@@ -1,14 +1,13 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
-  <title>Free AI code generator : generate code using AI Without Login• Tool Sphere</title>
-  <meta name="description" content="Explore our AI-powered code generator – a revolutionary tool for effortless code creation in multiple programming languages. Enhance your coding experience with error-free snippets, streamlined development, and increased productivity. Try our free online code generation tool today!">
- <meta name="keywords" content="AI code generator, code generation tool, programming language generator, automatic code creation, code automation, text-to-code, code snippet generator, coding assistant, development tools, machine learning code, programming utilities, code optimization, code suggestions, programming productivity, software development, coding efficiency, online coding tool, syntax error-free code, programming assistance, AI code generator without login, code generator without login, no api ke required, replit ghost writer api, code writer api, code generator api, ai code generator api, free, no key required, no login required, no api token required, free code generator for all, free ai code generator, ai code generator tools, ai to generate code, ai code generator c, free ai python code generators, ai java code generator, ai js code generator, online ai code generator, ai code generator online, program generator ai online without login">
+  <title>Free Text Translator | Translate Any Language using out translate Tool</title>
+  <link rel="canonical" href="https://tool-sphere.github.io/" />
+  <meta name="description" content="">
+ <meta name="keywords" content="">
   <link href="/css/landing-style.css" rel="stylesheet" type="text/css" />
-  <link href="/Etheme.css" rel="stylesheet" type="text/css" />
     <link href="/css/badge.css" rel="stylesheet" type="text/css" />
   <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png">
@@ -19,9 +18,6 @@
 <meta name="msapplication-TileColor" content="#da532c">
 <meta name="msapplication-config" content="/icons/browserconfig.xml">
 <meta name="theme-color" content="#ffffff">
-  <link rel="canonical" href="https://tool-sphere.github.io/" />
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.32.3/ace.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/highlight.min.js"></script>
 <style>
   .loading {
   height: 50px;
@@ -71,7 +67,46 @@
         background-color: cyan;  /*cyan*/
   }
 }
+  input[type="radio"] {
+background-color: rgba(255, 255, 255, 0.7); /* transparent white */
+  border-color: gold;
   }
+  input[type="radio"]:checked {
+      accent-color: #00fc2a;
+    background-color: transparent;
+border-color: gold;
+  }
+.button-88 {
+  -webkit-tap-highlight-color: transparent;
+  display: flex;
+  align-items: center;
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 16px;
+  padding: 0.7em 1.4em 0.7em 1.1em;
+  color: white;
+  background: #ad5389;
+  background: linear-gradient(0deg, rgba(20,167,62,1) 0%, rgba(102,247,113,1) 100%);
+  border: none;
+  box-shadow: 0 0.7em 1.5em -0.5em #14a73e98;
+  letter-spacing: 0.05em;
+  border-radius: 20em;
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  outline: none;
+}
+
+.button-88:hover {
+  box-shadow: 0 0.5em 1.5em -0.5em #14a73e98;
+  outline: none;
+}
+
+.button-88:active {
+  box-shadow: 0 0.3em 1em -0.5em #14a73e98;
+  outline: none;
+}
 </style>
 </head>
 
@@ -104,126 +139,91 @@
 </div>
   
   <div style="width: 100%; text-align: center; border: 0.5px solid white; border-radius: 5px;">
-<h1>AI code generator : generate code using AI in any language Without Login</h1>
+<h1></h1>
   </div> 
- <span style="text-align: center; align-items: center; font-size: 4em;"><span class="green-badge" style="margin-left: 10px;">New</span><span class="yellow-badge" style="margin-left: 10px;">AI</span><span class="pink-badge" style="margin-left: 10px;">Free</span></span>
+ <span style="text-align: center; align-items: center; font-size: 4em;"><span class="gold-badge" style="margin-left: 10px;">Trending</span><span class="pink-badge" style="margin-left: 10px;">Free</span></span>
  
 <div class="line"></div>
 <div style="width: 100%; align-items: center; flex-direction: column; display: flex;">
-<span style="font-size: 1em; color: white; margin-left: 4px; margin-top: 14px;">Your Prompt: </span>
-  <textarea maxlength="1000" placeholder="Enter What You want to Generate" id="prmpt" style="margin-top: 4px; width: 90%; height: 200px; background-color: transparent; color: white; border: 1px solid gray; border-radius: 10px; padding: 16px; outline: none;"></textarea>
-  <br>
-  <button id="genbtn" onclick="generate()" style="margin-top: 10px; width: 70%; height: 3em; background-color: transparent; color: black; font-size: 2em; border-radius: 12px; border: 1px gold solid; margin-bottom: 18px;
-    box-shadow: rgba(69, 192, 245, 0.25) 0px 30px 60px -12px inset, rgba(69, 192, 245, 0.3) 0px 18px 36px -18px inset; color: white;">
-  GENERATE CODE  
-  </button>
-</div>
+
+  <span style="margin-top: 22px; margin-bottom: 5px; font-size: 20px;">Send To*: </span>
+  <textarea maxlength="50" placeholder="send.to@email.com" id="sendto" style="margin-top: 4px; width: 90%; height: 30px; background-color: transparent; color: white; border: 1px solid gray; border-radius: 10px; padding: 8px; outline: none;"></textarea>
 <br>
+  <span style="margin-top: 12px; margin-bottom: 5px; font-size: 20px;">Title*: </span>
+  <textarea maxlength="50" placeholder="Tool Sphere Mail Sender Test" id="title" style="margin-top: 4px; width: 90%; height: 50px; background-color: transparent; color: white; border: 1px solid gray; border-radius: 10px; padding: 16px; outline: none;"></textarea>
+<br>
+  <span style="margin-top: 10px; margin-bottom: 5px; font-size: 20px;">Body*: </span>
+  <textarea maxlength="2000" placeholder="This Email Was Sent Using <a herf='https://tool-sphere.github.io/tools/email-sender/'>Tool Sphere</a>" id="body" style="margin-top: 4px; width: 90%; height: 140px; background-color: transparent; color: white; border: 1px solid gray; border-radius: 10px; padding: 16px; outline: none;"></textarea>
+  <br>
+  
+ <span style="margin-top: 10px; margin-bottom: 5px; font-size: 20px;">Format Type: </span>
+ <form id="format_type">
+<input type="radio" id="type_txt" name="toption" value="text" checked>
+  <label for="type_txt" style="font-size: 18px;">Text</label>
+  <br>
+  <input type="radio" id="type_html" name="toption" value="html">
+  
+  <label for="type_html"  style="font-size: 18px;">HTML</label>
+  </form>
+<br>
+  <span style="margin-top: 10px; margin-bottom: 5px; font-size: 20px;">API Key*: <a target="_blank" href="https://rapidapi.com/sujoyk211/api/mail-sender-api1/" style="font-size: 12px; color: gold;">Click To get API key for free</a></span>
+   <textarea maxlength="100" placeholder="YourSuperSecretAPIKey**" id="apikey" type="password" style="margin-top: 4px; width: 90%; height: 33px; background-color: transparent; color: white; border: 1px solid gray; border-radius: 10px; padding: 8px; outline: none;"></textarea>
+<br>
+  <div style="margin-top: 30px;" id="result"></div>
+  <br>
+  <button class="button-88" role="button" onclick="sendEmail()" id="sendBtn">Send Email</button>
+</div>
+  <div style="margin-top: 5px; margin-bottom: 5px;" class="line"></div>
 
-  <span style="display: block; font-size: 3em; color: white; margin-left: 10px; margin-top: 3em; margin-bottom: 7px;"> Generated Code: </span>
-  <div id="gcode" style="margin-top: 10px; margin: 0 auto; width: 100%; border: 1px solid green; border-radius: 4px; display: flex;">
-    <span id="bang" style="display: block; font-size: 22px; color: green; margin-left: 8px; margin-top: 4px; margin-bottom: 12px;">Generate Your Code now</span> <br>
-    
-  </div>
-<div id="editor" style="width: 90%; margin: 0 auto; height: 70%;" class="ace_dark ace-rk"></div>
-
-
-<h2>Our AI tool helps you generate code from your prompt without any api key ir login required, a process also known as Text-to-Code. Our AI can generate code in most languages, and you can also debug your code using our tool.</h2>
+<h2>Our Email Sender UI tool helps you to send emails for free without creating or linking your mail account, and you can also send html templates using our tool, you can use this tool in many purposes like you can use our <a href="https://rapidapi.com/sujoyk211/api/mail-sender-api1/" target="_blank" style="color: gold; text-decoration: underline;">Email Sender API</a> to send emails messages through your project for login otp send or somthing;</h2>
 
 <!--- FAQ --->
 
 <div class="line"></div>
- <span style="text-align: center; font-size: 2em;"> Frequently Asked Question And Answer</span> <br>
-  <span style="font-size: 20px; margin-left: 8px; margin-top: 5px;"><strong>Question: What is the purpose of the AI code generator?</strong></span> <br>
-  <span style="font-size: 20px; margin-top: 4px; margin-left: 8px; margin-bottom: 18px;">Answer: Our AI code generator is designed to assist users in quickly and effortlessly generating code in various programming languages. It aims to streamline the coding process, reduce errors, and enhance overall efficiency.</span>
-<br> <div class="line"></div> <br>
-  <span style="font-size: 20px; margin-left: 8px; margin-top: 5px;"><strong>Question: How does the AI code generator work?</strong></span> <br>
-  <span style="font-size: 20px; margin-top: 4px; margin-left: 8px; margin-bottom: 18px;">Answer: Our AI code generator utilizes advanced machine learning algorithms to analyze user input and generate corresponding code snippets. It learns from a diverse set of examples, allowing it to provide accurate and context-aware code suggestions.</span><br> 
-  <div class="line"></div> <br>
-  <span style="font-size: 20px; margin-left: 8px; margin-top: 5px;"><strong>Question: Is the generated code error-free?</strong></span> <br>
-  <span style="font-size: 20px; margin-top: 4px; margin-left: 8px; margin-bottom: 18px;">Answer: While our AI code generator aims to minimize errors, it's essential to review the generated code for accuracy and relevance to your specific requirements. Users should conduct thorough testing to ensure the desired functionality.</span><br> 
-  <div class="line"></div> <br>
-  <span style="font-size: 20px; margin-left: 8px; margin-top: 5px;"><strong>Question: In which programming languages does the code generator support?</strong></span> <br>
-  <span style="font-size: 20px; margin-top: 4px; margin-left: 8px; margin-bottom: 18px;">Answer: Our code generator supports a wide range of programming languages, including but not limited to Python, JavaScript, Java, C++, and more. We continuously update and expand language support based on user feedback and industry trends.</span><br> 
-  <div class="line"></div> <br>
-  <span style="font-size: 20px; margin-left: 8px; margin-top: 5px;"><strong>Question: Is the AI code generator free to use?</strong></span> <br>
-  <span style="font-size: 20px; margin-top: 4px; margin-left: 8px; margin-bottom: 18px;">Answer: Yes, our AI code generator is completely free for all users. We believe in providing accessible tools to the programming community to enhance the coding experience for developers of all skill levels.</span><br> 
-  <div class="line"></div> <br>
-  <span style="font-size: 20px; margin-left: 8px; margin-top: 5px;"><strong>Question: Can I integrate the generated code into my projects?</strong></span> <br>
-  <span style="font-size: 20px; margin-top: 4px; margin-left: 8px; margin-bottom: 18px;">Answer: Absolutely! The generated code is intended for use in your projects. Our system supports seamless integration, allowing you to enhance your code with new features and functionalities.</span><br> 
-  <div class="line"></div> <br>
-  <span style="font-size: 20px; margin-left: 8px; margin-top: 5px;"><strong>Question:  Is my data secure when using the AI code generator?</strong></span> <br>
-  <span style="font-size: 20px; margin-top: 4px; margin-left: 8px; margin-bottom: 18px;">Answer: We prioritize the security and privacy of user data. The code generation process is performed locally on our servers, and we do not store any sensitive or personal information.</span><br> 
-  <div class="line"></div> <br>
+<span style="text-align: center; font-size: 2em;">Frequently Asked Questions And Answers</span><br>
+
+<div class="line"></div> <br>
+
+  <span style="font-size: 20px; margin-left: 8px; margin-top: 5px;"><strong>Question: How to send html and text email message from my project?</strong></span> <br>
+<span style="font-size: 20px; margin-top: 4px; margin-left: 8px; margin-bottom: 18px;">Answer: Use out <a href="https://rapidapi.com/sujoyk211/api/mail-sender-api1/" target="_blank" style="color: gold; text-decoration: underline;">Email Sender API</a> To send unlimited Html and text Emails for free from your project or backend server securely without having delay.</span><br>
+
+<div class="line"></div> <br>
+  
+<span style="font-size: 20px; margin-left: 8px; margin-top: 5px;"><strong>Question: Do I need to create an account to use your email sender?</strong></span> <br>
+<span style="font-size: 20px; margin-top: 4px; margin-left: 8px; margin-bottom: 18px;">Answer: No, you don't need to create an account or log in to send emails while using our tool to send emails.</span><br>
+
+<div class="line"></div> <br>
+
+<span style="font-size: 20px; margin-left: 8px; margin-top: 5px;"><strong>Question: Is there a limit on how many emails I can send?</strong></span> <br>
+<span style="font-size: 20px; margin-top: 4px; margin-left: 8px; margin-bottom: 18px;">Answer: You can send unlimited emails for free! by using our tool</span><br>
+
+<div class="line"></div> <br>
+
+<span style="font-size: 20px; margin-left: 8px; margin-top: 5px;"><strong>Question: Can I send both text and HTML emails?</strong></span> <br>
+<span style="font-size: 20px; margin-top: 4px; margin-left: 8px; margin-bottom: 18px;">Answer: Yes, you can choose to send either text or HTML emails.</span><br>
+
+<div class="line"></div> <br>
+
+<span style="font-size: 20px; margin-left: 8px; margin-top: 5px;"><strong>Question: How secure is your service?</strong></span> <br>
+<span style="font-size: 20px; margin-top: 4px; margin-left: 8px; margin-bottom: 18px;">Answer: We take security seriously and implement various measures to protect your data. However, please note that no online service is foolproof.</span><br>
+
+<div class="line"></div> <br>
+
+<span style="font-size: 20px; margin-left: 8px; margin-top: 5px;"><strong>Question: Is there an API for developers?</strong></span> <br>
+<span style="font-size: 20px; margin-top: 4px; margin-left: 8px; margin-bottom: 18px;">Answer: Yes, we have an API that you can use to integrate the email sending functionality into your projects <a href="https://rapidapi.com/sujoyk211/api/mail-sender-api1/" target="_blank" style="color: gold; text-decoration: underline;">Mail Sender API link</a></span><br>
+
+<div class="line"></div> <br>
+
+<span style="font-size: 20px; margin-left: 8px; margin-top: 5px;"><strong>Question: What information do I need to send an email?</strong></span> <br>
+<span style="font-size: 20px; margin-top: 4px; margin-left: 8px; margin-bottom: 18px;">Answer: You'll need the recipient's email address, a subject line, and the email content, and the free API key which you can get from <a href="https://rapidapi.com/sujoyk211/api/mail-sender-api1/" target="_blank" style="color: gold; text-decoration: underline;">Mail Sender API Rapid API</a>.</span><br>
+
+ <div class="line"></div> <br>
  
-  <footer id="footer" style="background-color: #333; color: #fff; text-align: center; padding: 10px; bottom: 0; width: 100%;">
-        <p>&copy; 2023 Your Website. All rights reserved.</p>
-  <a href="/privacy-policy" style="color: #fff;">Privacy Policy</a> <br>
-  <a href="/about-us" style="color: #fff;">About Us</a> <br>
-  <a href="/contact-us" style="color: #fff;">Contact Us</a> <br>
-    </footer>
-  <script>
-    var btn = document.querySelector("#genbtn");
-    var prompt_ = document.querySelector("#prmpt");
-    var gcode = document.querySelector("#gcode");
-    var editor = ace.edit("editor");
-editor.setReadOnly(true);
-    var gh = document.querySelector("#bang");
-    function generate(){
-      if(!prompt_.value || prompt_.value.trim() === ""){
-prompt_.focus();
-        return;
-      };
-      prompt_.blur();
-      gh.innerHTML = "GENERATING YOUR CODE.. <br> Please Dont close the tab this process can take upto 10 seconds Please Be patient, Thank You <br> <div style='margin-top: 8px;' class='loading'><div class='obj'></div><div class='obj'></div><div class='obj'></div><div class='obj'></div><div class='obj'></div><div class='obj'></div><div class='obj'></div><div class='obj'></div></div> <br> Dont Close The window! <br> Generating Best Code For you, And Applying Beauty To your code";
-    prompt_.disabled = true;
-    btn.disabled = true;
-      editor.setValue();
-      setTimeout(() => {
-    gcode.scrollIntoView({
-  behavior: "smooth",
-  block: "center",  
-});
-      }, 200);
-      editor.setReadOnly(true);
-fetch(`https://tool-sphere.onrender.com/api/code-gen?q=${document.querySelector("#prmpt").value}`).then(json => json.json()).then(async dy => {
- var langtoset = detectLanguage(dy.result.data[0]);
-  if(langtoset){
-   editor.session.setMode(`ace/mode/${langtoset}`);
-  }  
-  editor.setValue(dy.result.data[0]);
-  prompt_.disabled = false;
-  btn.disabled = false;
-  gh.innerHTML = "Your Code Generated Successfully ✅, Thanks For using out Tool";
-  editor.setReadOnly(false);
-  gcode.scrollIntoView({
-  behavior: "smooth",
-  block: "center",  
-});
-});
-    }
-function detectLanguage(code) {
-    var result = hljs.highlightAuto(code);
-    return result.language;
-}    
-  </script>
-  
-  <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "What is the best AI code generator?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "The best AI code generator is one that suits your specific needs. Our website offers a powerful code generation tool, allowing you to effortlessly generate code in multiple programming languages. Try it out and experience streamlined development with error-free snippets."
-      }
-    }
-  ]
-}
-  </script>
-  
+<footer id="footer" style="background-color: #333; color: #fff; text-align: center; padding: 10px; bottom: 0; width: 100%;">
+        <p>&copy; 2024 tool-sphere. All rights reserved.</p>
+  <a href="/privacy-policy" style="color: #fff;">Privacy Policy</a> <br><br>
+  <a href="/about-us" style="color: #fff;">About Us</a> <br><br>
+  <a href="/contact-us" style="color: #fff;">Contact Us</a> <br><br>
+  </footer>
 </body>
   </html>
