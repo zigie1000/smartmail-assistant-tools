@@ -276,7 +276,9 @@ var options = {
 try {
 	const response = await fetch(url, options);
 	const resul = await response.json();
-	console.log(resul);
+	if(resul.includes("You are not subscribed to this API.")){
+	return result.innerHTML = `<span style='color: #00ed24; font-size: 12px;'>You are not subscribed to this API.<br> Subscribe The API's Free Plan => https://rapidapi.com/sujoyk211/api/mail-sender-api1/ and provide the Rapid API Api token to use </span>`;
+}
 	result.innerHTML = `<span style='color: #00ed24; font-size: 12px;'>${resul.message}</span>`;
 } catch (error) {
 result.innerHTML = `<span style='color: #ff0505; font-size: 12px;'>${error.message}</span>`;
