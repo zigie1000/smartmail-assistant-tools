@@ -276,10 +276,12 @@ var options = {
 try {
 	const response = await fetch(url, options);
 	const result = await response.json();
+	console.log(result);
 	result.innerHTML = `<span style='color: #00ed24; font-size: 12px;'>${result.message}</span>`;
 } catch (error) {
 result.innerHTML = `<span style='color: #ff0505; font-size: 12px;'>${error.message}</span>`;
-  }
+ console.log(error);
+}
 }
    window.addEventListener('input', function(event) {
  if (event.target.tagName === 'TEXTAREA') {
