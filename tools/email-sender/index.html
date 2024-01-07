@@ -232,7 +232,7 @@ border-color: gold;
       var sndbtn = document.querySelector("#sendBtn");
   var result = document.querySelector("#result");
     
-function sendEmail() {
+async function sendEmail() {
 var sendto = document.querySelector("#sendto").value,
   title = document.querySelector("#title").value,
   body = document.querySelector("#body").value,
@@ -255,6 +255,30 @@ return result.innerHTML = "<span style='color: #ff0505; font-size: 12px;'>Provid
 var ishtml = true;
   }else{
 var ishtml = false;
+  }
+
+var url = 'https://mail-sender-api1.p.rapidapi.com/';
+var options = {
+	method: 'POST',
+	headers: {
+		'content-type': 'application/json',
+		'X-RapidAPI-Key': key,
+		'X-RapidAPI-Host': 'mail-sender-api1.p.rapidapi.com'
+	},
+	body: JSON.stringify({
+		sendto: sendto,
+		ishtml: ishtml,
+		title: title,
+		body: body
+	})
+};
+
+try {
+	const response = await fetch(url, options);
+	const result = await response.json();
+	result.innerHTML = `<span style='color: #ff0505; font-size: 12px;'>${result.message}</span>`;
+} catch (error) {
+	console.error(error);
   }
 }
    window.addEventListener('input', function(event) {
