@@ -236,7 +236,9 @@ function sendEmail() {
 var sendto = document.querySelector("#sendto").value,
   title = document.querySelector("#title").value,
   body = document.querySelector("#body").value,
-  key = document.querySelector("#apikey").value;  
+  key = document.querySelector("#apikey").value,  
+  type = document.querySelector('input[name="options"]:checked').value;
+  console.log(type);
   if(sendto.trim() === "" || sendto.toLowerCase().match(/^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/) == null){
 result.innerHTML = "<span style='color: #ff0505; font-size: 12px;'>Provide A Valid Email To Send</span>";
   }
