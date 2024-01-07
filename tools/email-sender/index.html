@@ -273,6 +273,7 @@ var options = {
 };
 
 try {
+	result.innerHTML = `<div style='margin-top: 8px;' class='loading'><div class='obj'></div><div class='obj'></div><div class='obj'></div><div class='obj'></div><div class='obj'></div><div class='obj'></div><div class='obj'></div><div class='obj'></div></div>`;
 	sndbtn.disabled = true; 
 	const response = await fetch(url, options);
 	const resul = await response.json();
