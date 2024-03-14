@@ -153,6 +153,9 @@ body {
   max-width: 500px; /* Adjust max-width as needed */
 color: black;
   }
+#cookie-consent p {
+  color: black;
+}
 
 #cookie-consent a {
   text-decoration: none;
