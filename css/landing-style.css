@@ -151,7 +151,8 @@ body {
   align-items: center;
   width: calc(100vw - 20px);
   max-width: 500px; /* Adjust max-width as needed */
-}
+color: black;
+  }
 
 #cookie-consent a {
   text-decoration: none;
