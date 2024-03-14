@@ -18,7 +18,6 @@
 <meta name="msapplication-TileColor" content="#da532c">
 <meta name="msapplication-config" content="/icons/browserconfig.xml">
 <meta name="theme-color" content="#ffffff">
-<script type='text/javascript' src='//pl22229512.toprevenuegate.com/7a/25/b8/7a25b8f7f637f7e331f04eb59840ff3d.js'></script>
 </head>
 
 <body>
@@ -73,9 +72,26 @@ Additionally, our platform provides a robust debugging environment, empowering y
   <a href="/about-us" style="color: #fff;">About Us</a> <br><br>
   <a href="/contact-us" style="color: #fff;">Contact Us</a> <br><br>
     </footer>
+    <div id="cookie-consent">
+    <p>This website uses cookies for ad personalization and to enhance your browsing experience.</p>
+    <button id="accept-cookies">Accept</button>
+    </div>
+  <style>
+    const cookieConsent = document.getElementById('cookie-consent');
+const acceptButton = document.getElementById('accept-cookies');
+
+acceptButton.addEventListener('click', () => {
+  // Simulate storing consent (replace with actual storage logic)
+  localStorage.setItem('cookieConsentAccepted', true);
+  cookieConsent.style.display = 'none';
+});
+
+// Check if consent is already stored (replace with actual logic)
+if (localStorage.getItem('cookieConsentAccepted')) {
+  cookieConsent.style.display = 'none';
+    }
+  </style>
 </body>
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2813905187470909"
-     crossorigin="anonymous"></script>
 </html>
 
 
