@@ -227,6 +227,10 @@ border-color: gold;
   <a href="/about-us" style="color: #fff;">About Us</a> <br><br>
   <a href="/contact-us" style="color: #fff;">Contact Us</a> <br><br>
     </footer>
+	  <div id="cookie-consent">
+    <p>This website uses cookies for ad personalization and to enhance your browsing experience.</p>
+    <button id="accept-cookies">Accept</button>
+	  </div>
   <script>
       var sndbtn = document.querySelector("#sendBtn");
   var result = document.querySelector("#result");
@@ -288,6 +292,19 @@ result.innerHTML = `<span style='color: #ff0505; font-size: 12px;'>Error When se
  console.log(error);
 }
 	  }
+	  const cookieConsent = document.getElementById('cookie-consent');
+const acceptButton = document.getElementById('accept-cookies');
+
+acceptButton.addEventListener('click', () => {
+  // Simulate storing consent (replace with actual storage logic)
+  localStorage.setItem('cookieConsentAccepted', true);
+  cookieConsent.style.display = 'none';
+});
+
+// Check if consent is already stored (replace with actual logic)
+if (localStorage.getItem('cookieConsentAccepted')) {
+  cookieConsent.style.display = 'none';
+	}
   </script>
 	<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2813905187470909"
      crossorigin="anonymous"></script>
