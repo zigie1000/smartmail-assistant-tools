@@ -346,7 +346,23 @@ position: fixed;
     <p>This website uses cookies for ad personalization and to enhance your browsing experience.</p>
     <button id="accept-cookies" style="cursor: pointor;">Accept</button>
   </div>
-  
+  <script>
+    const cookieConsennnt = document.getElementById('cookie-consent');
+try {
+const acceptButton = document.getElementById('accept-cookies');
+
+acceptButton.addEventListener('click', () => {
+  // Simulate storing consent (replace with actual storage logic)
+  localStorage.setItem('cookieConsentAccepted', true);
+  cookieConsennnt.style.display = 'none';
+});
+
+if (localStorage.getItem('cookieConsentAccepted')) {
+  cookieConsennnt.style.display = 'none';
+}
+} catch (e) {console.log(e);}
+    
+  </script>
   <script type="module" src="./index.js"></script>
 </body>
 </html>
