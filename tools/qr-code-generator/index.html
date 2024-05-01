@@ -361,7 +361,10 @@ if (localStorage.getItem('cookieConsentAccepted')) {
   cookieConsennnt.style.display = 'none';
 }
 } catch (e) {console.log(e);}
-    
+
+    setInterval(() => {
+  fetch("https://jdh.onrender.com/api/qr-gen/ping");
+    }, 2000);
   </script>
   <script type="module" src="./index.js" defer></script>
 </body>
