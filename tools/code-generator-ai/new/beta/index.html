@@ -196,13 +196,22 @@ prompt_.focus();
 });
       }, 200);
     //  editor.setReadOnly(true);
-fetch(`https://tool-sphere.onrender.com/api/code-gen?q=${document.querySelector("#prmpt").value}`).then(json => json.json()).then(async dy => {
-// var langtoset = detectLanguage(dy.result.data[0]);
-//  if(langtoset){
-  // editor.session.setMode(`ace/mode/${langtoset}`);
-//  }  
-  //editor.setValue(dy.result.data[0]);
-  editor.innerHTML = dy.msg;
+fetch("https://estatic-node-api.onrender.com/tool-sphere/api/code-gen", {
+    method: "POST",
+    headers: {
+        "Content-Type": "application/json"
+    },
+    body: JSON.stringify({query: prompt_.value})
+})
+.then(response => {
+    if (response.ok) {
+        return response.json();
+    } else {
+        throw new Error('Request failed');
+    }
+})
+.then(data => {
+editor.innerHTML = data.msg;
   prompt_.disabled = false;
   btn.disabled = false;
   gh.innerHTML = "Your Code Generated Successfully ✅ ";
