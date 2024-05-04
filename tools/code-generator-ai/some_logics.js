@@ -9,12 +9,15 @@ let match;
 
 // Loop through all matches using RegExp.exec() in a while loop
 while ((match = pattern.exec(text)) !== null) {
-    // Extract the name and description from the matched groups
-    let name = match[1];
-    let description = match[2];
-
-    // Push the extracted name and description as an object into the matches array
-    matches.push({ name, description });
+    let codeName = match[1];
+    let code = match[2];
+ var editorDiv = document.createElement("div");
+    editorDiv.id = "editor";
+    var aceEditor = ace.edit(editorDiv);
+    aceEditor.setReadOnly(true)
+    aceEditor.session.setMode(`ace/mode/${codeName}`)
+    aceEditor.setValue(code)
+    document.append(editorDiv);
 }
 
 if (matches.length > 0) {
