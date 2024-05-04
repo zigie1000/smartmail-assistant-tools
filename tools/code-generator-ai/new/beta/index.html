@@ -176,8 +176,8 @@
     var btn = document.querySelector("#genbtn");
     var prompt_ = document.querySelector("#prmpt");
     var gcode = document.querySelector("#gcode");
-    var editor = ace.edit("editor");
-editor.setReadOnly(true);
+  //  var editor = ace.edit("editor");
+//editor.setReadOnly(true);
     var gh = document.querySelector("#bang");
     function generate(){
       if(!prompt_.value || prompt_.value.trim() === ""){
@@ -188,15 +188,15 @@ prompt_.focus();
       gh.innerHTML = "<strong><h4 style='color: cyan;'>🥳 Updated ✓ with 1000 X powerfull model 🤖</h4></strong> GENERATING YOUR CODE.. <!---<br> Try Our <strong><a href='https://rapidapi.com/sujoyk211/api/mail-sender-api1/' target='_blank'>MAIL SENDER API</a> </strong> To send Email (HTML / TEXT) messages for free * No Credit Card Required 100% free <br> API LINK: https://rapidapi.com/sujoyk211/api/mail-sender-api1/ ---> Please Dont close the tab this process can take upto 10 seconds Please Be patient <div style='margin-top: 3px;' class='loading'><div class='obj'></div><div class='obj'></div><div class='obj'></div><div class='obj'></div><div class='obj'></div><div class='obj'></div><div class='obj'></div><div class='obj'></div></div> Dont Close The window! <br> Generating Best Code For you, And Applying Beauty To your code... <br> <h4 style='color: cyan;'>More tools Added ✓ have you tried? Open Nav Panel and check our other cool tools all are free of cost and no ads in the website 🥳 enjoy</h4>";
     prompt_.disabled = true;
     btn.disabled = true;
-      editor.setValue();
+   //   editor.setValue();
       setTimeout(() => {
     gcode.scrollIntoView({
   behavior: "smooth",
   block: "center",  
 });
       }, 200);
-      editor.setReadOnly(true);
-fetch(`https://tool-sphere.onrender.com/api/code-gen?q=${document.querySelector("#prmpt").value}`).then(json => json.json()).then(async dy => {
+    //  editor.setReadOnly(true);
+/*fetch(`https://tool-sphere.onrender.com/api/code-gen?q=${document.querySelector("#prmpt").value}`).then(json => json.json()).then(async dy => {
  var langtoset = detectLanguage(dy.result.data[0]);
   if(langtoset){
    editor.session.setMode(`ace/mode/${langtoset}`);
@@ -210,8 +210,9 @@ fetch(`https://tool-sphere.onrender.com/api/code-gen?q=${document.querySelector(
   behavior: "smooth",
   block: "center",  
 });
-});
+});*/
     }
+    
 function detectLanguage(code) {
     var result = hljs.highlightAuto(code);
     return result.language;
@@ -229,9 +230,18 @@ acceptButton.addEventListener('click', () => {
 if (localStorage.getItem('cookieConsentAccepted')) {
   cookieConsent.style.display = 'none';
   }
+
+    function parseCodeBlocks(texat) {
+  const codeblock = /```(?:([a-zA-Z0-9]+)\s*)?([\s\S]+?)```/g;
+var jdkd = (codeblock.exec(texat));
+    return {
+        name: jdkd[1] ?? "bash",
+        code: jdkd[2] ?? ""
+    }
+}
+parseCodeBlocks(text)
+    
   </script>
-  <!---<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2813905187470909"
-     crossorigin="anonymous"></script>--->
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
