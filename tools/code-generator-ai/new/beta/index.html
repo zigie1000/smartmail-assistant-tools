@@ -196,21 +196,22 @@ prompt_.focus();
 });
       }, 200);
     //  editor.setReadOnly(true);
-/*fetch(`https://tool-sphere.onrender.com/api/code-gen?q=${document.querySelector("#prmpt").value}`).then(json => json.json()).then(async dy => {
- var langtoset = detectLanguage(dy.result.data[0]);
-  if(langtoset){
-   editor.session.setMode(`ace/mode/${langtoset}`);
-  }  
-  editor.setValue(dy.result.data[0]);
+fetch(`https://tool-sphere.onrender.com/api/code-gen?q=${document.querySelector("#prmpt").value}`).then(json => json.json()).then(async dy => {
+// var langtoset = detectLanguage(dy.result.data[0]);
+//  if(langtoset){
+  // editor.session.setMode(`ace/mode/${langtoset}`);
+//  }  
+  //editor.setValue(dy.result.data[0]);
+  editor.innerHTML = dy.msg;
   prompt_.disabled = false;
   btn.disabled = false;
   gh.innerHTML = "Your Code Generated Successfully ✅ ";
-  editor.setReadOnly(false);
+  //editor.setReadOnly(false);
   gcode.scrollIntoView({
   behavior: "smooth",
   block: "center",  
 });
-});*/
+});
     }
     
 function detectLanguage(code) {
