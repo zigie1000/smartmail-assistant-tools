@@ -243,20 +243,21 @@ if (localStorage.getItem('cookieConsentAccepted')) {
   cookieConsent.style.display = 'none';
   }
 
-    function parseCodeBlocks(texatt) {
+   async function parseCodeBlocks(texatt) {
   const codeblock = /```(?:([a-zA-Z0-9]+)\s*)?([\s\S]+?)```/;
   let texat = texatt; //.replace(codeblock, `<pre><code>${(jdkd[2]).replace(/<br>/g, "\n")}</code></pre>`);
     //  editor.innerHTML = `${newtexti}`;
   var match;
     
         while ((match = codeblock.exec(texat)) !== null) {
-        let tempEditor = document.createElement("div");
-        tempEditor.style = "width: 90%; height: auto; margin: 0 auto;";
-       texat = texat.replace(codeblock, tempEditor.outerHTML)
-      //    console.log(tempEditor);
-        let aceTempEditor = ace.edit(tempEditor);
-        aceTempEditor.setValue = (match[2]).trim().replace(/\n/g, '*:*nl*:*')
-        //console.log(tempEditor);
+        let tempEditor = await document.createElement("div");
+        await tempEditor.style = "width: 90%; height: auto; margin: 0 auto;";
+            //    console.log(tempEditor);
+        let aceTempEditor = await ace.edit(tempEditor);
+       await aceTempEditor.setValue = (match[2]).trim().replace(/\n/g, '*:*nl*:*')
+       texat = await texat.replace(codeblock, tempEditor.outerHTML)
+     
+          //console.log(tempEditor);
         //texat.replace(codeblock, tempEditor.outerHTML);
     }  
    editor.innerHTML = `${texat.replace(/\n/g, "<br>").replace(/\*\:\*nl\*\:\*/g, "\n")}`;
