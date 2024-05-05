@@ -245,27 +245,22 @@ if (localStorage.getItem('cookieConsentAccepted')) {
 
     function parseCodeBlocks(texatt) {
   const codeblock = /```(?:([a-zA-Z0-9]+)\s*)?([\s\S]+?)```/;
-  var texat = texatt; //.replace(codeblock, `<pre><code>${(jdkd[2]).replace(/<br>/g, "\n")}</code></pre>`);
+  let texat = texatt; //.replace(codeblock, `<pre><code>${(jdkd[2]).replace(/<br>/g, "\n")}</code></pre>`);
     //  editor.innerHTML = `${newtexti}`;
   var match;
-      console.log(codeblock.exec(texat))      
-        console.log(codeblock.exec(texat))
-        console.log(codeblock.exec(texat))
-            console.log(codeblock.exec(texat))
-            console.log(codeblock.exec(texat))
+    
+        while ((match = codeblock.exec(texat)) !== null) {
+      texat = texat.replace(codeblock, `${(match[2]).trim().replace(/\n/g, '*:*nl*:*')}`))
+    console.log("pilled");
       
-      /*  while ((match = codeblock.exec(texat)) !== null) {
-     console.log("pilled");
-        console.log(match[2]);
-        //var texat = texat.replace(codeblock, `<pre style="margin: 0;"><code style="border-radius: 12px;">${(match[2]).trim().replace(/\n/g, '*:*nl*:*')}</code></pre>`))
-     //   let tempEditor = document.createElement("div");
+          //   let tempEditor = document.createElement("div");
       //  tempEditor.style = "width: 90%; height: auto; margin: 0 auto;";
     //    console.log(tempEditor);
         //let aceTempEditor = ace.edit(tempEditor);
         //aceTempEditor.setValue = (match[2]).trim().replace(/\n/g, '*:*nl*:*')
         //console.log(tempEditor);
         //texat.replace(codeblock, tempEditor.outerHTML);
-    }  */ 
+    }  
    //editor.innerHTML = `${texat.replace(/\n/g, "<br>").replace(/\*\:\*nl\*\:\*/g, "\n")}`;
    }
 
