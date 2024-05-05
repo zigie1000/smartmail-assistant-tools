@@ -254,7 +254,7 @@ if (localStorage.getItem('cookieConsentAccepted')) {
         await tempEditor.style = "width: 90%; height: auto; margin: 0 auto;";
             //    console.log(tempEditor);
         let aceTempEditor = await ace.edit(tempEditor);
-       await aceTempEditor.setValue = (match[2]).trim().replace(/\n/g, '*:*nl*:*')
+        aceTempEditor.setValue = await (match[2]).trim().replace(/\n/g, '*:*nl*:*')
        texat = await texat.replace(codeblock, tempEditor.outerHTML)
      
           //console.log(tempEditor);
