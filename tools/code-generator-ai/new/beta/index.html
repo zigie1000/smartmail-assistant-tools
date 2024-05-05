@@ -267,10 +267,10 @@ if (localStorage.getItem('cookieConsentAccepted')) {
       while ((match = codeblock.exec(texat)) !== null) {
       //var texat = texat.replace(codeblock, `<pre style="margin: 0;"><code style="border-radius: 12px;">${(match[2]).trim().replace(/\n/g, '*:*nl*:*')}</code></pre>`))
         let tempEditor = document.createElement("div");
-        tempEditor.style = "";
+        tempEditor.style = "width: 90%; height: auto; margin: 0 auto;";
         let aceTempEditor = ace.edit(tempEditor);
         aceTempEditor.setValue = (match[2]).trim().replace(/\n/g, '*:*nl*:*')
-        texat.replace(codeblock, aceTempEditor.outerHTML);
+        texat.replace(codeblock, tempEditor.outerHTML);
     }   
    editor.innerHTML = `${texat.replace(/\n/g, "<br>").replace(/\*\:\*nl\*\:\*/g, "\n")}`;
    }
