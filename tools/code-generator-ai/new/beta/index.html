@@ -251,7 +251,7 @@ if (localStorage.getItem('cookieConsentAccepted')) {
         name: jdkd[1] ?? "bash",
         code: jdkd[2] ?? ""
     }*/
-      var texat = texatt.replace(codeblock, `<pre><code>${(jdkd[2]).replace(/<br>/g, "\n")}</code></pre>`);
+      var texat = texatt; //.replace(codeblock, `<pre><code>${(jdkd[2]).replace(/<br>/g, "\n")}</code></pre>`);
     //  editor.innerHTML = `${newtexti}`;
   var match;
       while ((match = codeblock.exec(texat)) !== null) {
