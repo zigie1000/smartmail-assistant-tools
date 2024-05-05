@@ -270,9 +270,10 @@ if (localStorage.getItem('cookieConsentAccepted')) {
         tempEditor.style = "width: 90%; height: auto; margin: 0 auto;";
         let aceTempEditor = ace.edit(tempEditor);
         aceTempEditor.setValue = (match[2]).trim().replace(/\n/g, '*:*nl*:*')
-        texat.replace(codeblock, tempEditor.outerHTML);
+        console.log(tempEditor.outerHTML);
+        //texat.replace(codeblock, tempEditor.outerHTML);
     }   
-   editor.innerHTML = `${texat.replace(/\n/g, "<br>").replace(/\*\:\*nl\*\:\*/g, "\n")}`;
+   //editor.innerHTML = `${texat.replace(/\n/g, "<br>").replace(/\*\:\*nl\*\:\*/g, "\n")}`;
    }
 
     
