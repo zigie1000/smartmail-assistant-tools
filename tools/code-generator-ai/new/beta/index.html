@@ -244,7 +244,7 @@ if (localStorage.getItem('cookieConsentAccepted')) {
   }
 
     function parseCodeBlocks(texat) {
-  const codeblock = /```(?:([a-zA-Z0-9]+)\s*)?([\s\S]+?)```/g;
+  const codeblock = /```(?:([a-zA-Z0-9]+)\s*)?([\s\S]+?)```/;
 var jdkd = (codeblock.exec(texat));
 // <pre><code class="language-html">...</code></pre>
     /*  return {
