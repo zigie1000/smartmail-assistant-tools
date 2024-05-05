@@ -245,17 +245,20 @@ if (localStorage.getItem('cookieConsentAccepted')) {
 
     function parseCodeBlocks(texat) {
   const codeblock = /```(?:([a-zA-Z0-9]+)\s*)?([\s\S]+?)```/;
-var jdkd = (codeblock.exec(texat));
+//var jdkd = (codeblock.exec(texat));
 // <pre><code class="language-html">...</code></pre>
     /*  return {
         name: jdkd[1] ?? "bash",
         code: jdkd[2] ?? ""
     }*/
-      console.log(jdkd);
-      var newtexti = texat.replace(codeblock, `<pre><code>${(jdkd[2]).replace(/<br>/g, "\n")}</code></pre>`);
-      editor.innerHTML = `${newtexti}`;
-      
-}
+    //  var texat = texat.replace(codeblock, `<pre><code>${(jdkd[2]).replace(/<br>/g, "\n")}</code></pre>`);
+    //  editor.innerHTML = `${newtexti}`;
+  var match;
+      while ((match = codeblock.exec(text)) !== null) {
+      var texat = texat.replace(codeblock, `<pre><code>${(jdkd[2]).replace(/<br>/g, "\n")}</code></pre>`);
+    }   
+   editor.innerHTML = `${texat}`;
+   }
 
     
   </script>
