@@ -212,7 +212,7 @@ fetch("https://estatic-node-api.onrender.com/tool-sphere/api/code-gen", {
     }
 })
 .then(data => {
- parseCodeBlocks(`${data.msg.replace(/<\|im_end\|>\s*$/, "").replace(/\n/g, "<br>")}`)
+ parseCodeBlocks(`${data.msg.replace(/<\|im_end\|>\s*$/, "")}`)
   prompt_.disabled = false;
   btn.disabled = false;
   gh.innerHTML = "Your Code Generated Successfully ✅ ";
@@ -255,9 +255,9 @@ if (localStorage.getItem('cookieConsentAccepted')) {
     //  editor.innerHTML = `${newtexti}`;
   var match;
       while ((match = codeblock.exec(texat)) !== null) {
-      var texat = texat.replace(codeblock, `<pre style="margin: 0;"><code style="border-radius: 12px;">${((match[2]).trim()).replace(/<br>/g, "\n")}</code></pre>`);
+      var texat = texat.replace(codeblock, `<pre style="margin: 0;"><code style="border-radius: 12px;">${(match[2]).trim()}</code></pre>`);
     }   
-   editor.innerHTML = `${texat}`;
+   editor.innerHTML = `${texat.replace(/\n/g, "<br>")}`;
    }
 
     
