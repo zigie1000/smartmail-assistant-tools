@@ -266,6 +266,7 @@ if (localStorage.getItem('cookieConsentAccepted')) {
   var match;
       while ((match = codeblock.exec(texat)) !== null) {
      console.log("pilled");
+        console.log(match[2]);
         //var texat = texat.replace(codeblock, `<pre style="margin: 0;"><code style="border-radius: 12px;">${(match[2]).trim().replace(/\n/g, '*:*nl*:*')}</code></pre>`))
      //   let tempEditor = document.createElement("div");
       //  tempEditor.style = "width: 90%; height: auto; margin: 0 auto;";
