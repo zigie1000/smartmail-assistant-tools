@@ -251,19 +251,8 @@ if (localStorage.getItem('cookieConsentAccepted')) {
   var match;
  
         while ((match = codeblock.exec(texat)) !== null) {
-        let tempEditor = await document.createElement("div");
-         tempEditor.style = "width: 90%; height: 500px; margin: 0 auto; overflow: auto;";
-         tempEditor.id = "nm";
-         tempEditor.classList.add('ace_dark', 'ace-rk')
-            // console.log(tempEditor);
-        let aceTempEditor = await ace.edit("nm");
-      setTimeout(async() => {
-          await aceTempEditor.setValue((match[2]).trim().replace(/\n/g, '*:*nl*:*'));
-          }, 600);
-        texat = await texat.replace(codeblock, tempEditor.outerHTML)
-     
-          //console.log(tempEditor);
-        //texat.replace(codeblock, tempEditor.outerHTML);
+        
+        texat = await texat.replace(codeblock, `<textarea style="width: 90%; height: auto; margin: 0 auto; color: white; overflow: auto;" disabled>${(match[2]).trim().replace(/\n/g, '*:*nl*:*')}</textarea>`)
     }  
    editor.innerHTML = `${texat.replace(/\n/g, "<br>").replace(/\*\:\*nl\*\:\*/g, "\n")}`;
    }
