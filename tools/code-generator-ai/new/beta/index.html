@@ -255,7 +255,7 @@ if (localStorage.getItem('cookieConsentAccepted')) {
     //  editor.innerHTML = `${newtexti}`;
   var match;
       while ((match = codeblock.exec(texat)) !== null) {
-      var texat = texat.replace(codeblock, `<pre style="border-radius: 8px;"><code>${((match[2]).trim()).replace(/<br>/g, "\n")}</code></pre>`);
+      var texat = texat.replace(codeblock, `<pre style="margin: 0;"><code style="border-radius: 12px;">${((match[2]).trim()).replace(/<br>/g, "\n")}</code></pre>`);
     }   
    editor.innerHTML = `${texat}`;
    }
