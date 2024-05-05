@@ -212,7 +212,7 @@ fetch("https://estatic-node-api.onrender.com/tool-sphere/api/code-gen", {
     }
 })
 .then(data => {
- parseCodeBlocks(`${data.msg.replace(/<\|im_end\|>\s*$/, "")}`)
+ parseCodeBlocks(`${data.msg.replace(/<\|im_end\|>\s*$/, "").replace(/</g, "&lt").replace(/>/g, "&gt")}`)
   prompt_.disabled = false;
   btn.disabled = false;
   gh.innerHTML = "Your Code Generated Successfully ✅ ";
