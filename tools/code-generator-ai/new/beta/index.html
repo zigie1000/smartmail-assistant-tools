@@ -251,7 +251,8 @@ var jdkd = (codeblock.exec(texat));
         name: jdkd[1] ?? "bash",
         code: jdkd[2] ?? ""
     }*/
-      editor.innerHTML = ``;
+      var newtexti = texat.replace(codeblock, `<pre><code>${jdkd[2]}</code></pre>`);
+      editor.innerHTML = `${newtexti}`;
       
 }
 
