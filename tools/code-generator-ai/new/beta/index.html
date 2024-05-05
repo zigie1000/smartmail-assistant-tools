@@ -250,7 +250,7 @@ if (localStorage.getItem('cookieConsentAccepted')) {
   var match;
     
         while ((match = codeblock.exec(texat)) !== null) {
-      texat = texat.replace(codeblock, `${(match[2]).trim().replace(/\n/g, '*:*nl*:*')}`))
+      texat = texat.replace(codeblock, `${(match[2]).trim().replace(/\n/g, '*:*nl*:*')}`)
     console.log("pilled");
       
           //   let tempEditor = document.createElement("div");
