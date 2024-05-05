@@ -237,7 +237,7 @@ fetch("https://estatic-node-api.onrender.com/tool-sphere/api/code-gen", {
   behavior: "smooth",
   block: "center",  
 });
-  hljs.highlightAll();
+ //? hljs.highlightAll();
 });
     }
     
@@ -265,7 +265,12 @@ if (localStorage.getItem('cookieConsentAccepted')) {
     //  editor.innerHTML = `${newtexti}`;
   var match;
       while ((match = codeblock.exec(texat)) !== null) {
-      var texat = texat.replace(codeblock, `<pre style="margin: 0;"><code style="border-radius: 12px;">${(match[2]).trim().replace(/\n/g, '*:*nl*:*')}</code></pre>`);
+      //var texat = texat.replace(codeblock, `<pre style="margin: 0;"><code style="border-radius: 12px;">${(match[2]).trim().replace(/\n/g, '*:*nl*:*')}</code></pre>`))
+        let tempEditor = document.createElement("div");
+        tempEditor.style = "";
+        let aceTempEditor = ace.edit(tempEditor);
+       // aceTempEditor.z = 
+        texat.replace(codeblock, `${(match[2]).trim().replace(/\n/g, '*:*nl*:*')}`);
     }   
    editor.innerHTML = `${texat.replace(/\n/g, "<br>").replace(/\*\:\*nl\*\:\*/g, "\n")}`;
    }
