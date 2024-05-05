@@ -211,7 +211,7 @@ fetch("https://estatic-node-api.onrender.com/tool-sphere/api/code-gen", {
     }
 })
 .then(data => {
-editor.innerHTML = `${data.msg}`;
+editor.innerHTML = `${data.msg.replace(/\/n/g, "<br>")}`;
   prompt_.disabled = false;
   btn.disabled = false;
   gh.innerHTML = "Your Code Generated Successfully ✅ ";
