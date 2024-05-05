@@ -269,8 +269,8 @@ if (localStorage.getItem('cookieConsentAccepted')) {
         let tempEditor = document.createElement("div");
         tempEditor.style = "";
         let aceTempEditor = ace.edit(tempEditor);
-       // aceTempEditor.z = 
-        texat.replace(codeblock, `${(match[2]).trim().replace(/\n/g, '*:*nl*:*')}`);
+        aceTempEditor.setValue = (match[2]).trim().replace(/\n/g, '*:*nl*:*')
+        texat.replace(codeblock, aceTempEditor.outerHTML);
     }   
    editor.innerHTML = `${texat.replace(/\n/g, "<br>").replace(/\*\:\*nl\*\:\*/g, "\n")}`;
    }
