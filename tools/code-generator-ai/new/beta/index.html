@@ -255,7 +255,7 @@ if (localStorage.getItem('cookieConsentAccepted')) {
          tempEditor.classList.add('ace_dark', 'ace-rk')
             // console.log(tempEditor);
         let aceTempEditor = await ace.edit(tempEditor);
-        aceTempEditor.setValue = await (match[2]).trim().replace(/\n/g, '*:*nl*:*')
+        await aceTempEditor.setValue((match[2]).trim().replace(/\n/g, '*:*nl*:*'));
        texat = await texat.replace(codeblock, tempEditor.outerHTML)
      
           //console.log(tempEditor);
