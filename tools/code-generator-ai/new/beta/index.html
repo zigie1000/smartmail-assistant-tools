@@ -251,7 +251,7 @@ if (localStorage.getItem('cookieConsentAccepted')) {
     
         while ((match = codeblock.exec(texat)) !== null) {
         let tempEditor = await document.createElement("div");
-        await tempEditor.style = "width: 90%; height: auto; margin: 0 auto;";
+         tempEditor.style = "width: 90%; height: auto; margin: 0 auto;";
             //    console.log(tempEditor);
         let aceTempEditor = await ace.edit(tempEditor);
         aceTempEditor.setValue = await (match[2]).trim().replace(/\n/g, '*:*nl*:*')
