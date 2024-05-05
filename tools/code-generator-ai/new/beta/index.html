@@ -253,11 +253,14 @@ if (localStorage.getItem('cookieConsentAccepted')) {
         while ((match = codeblock.exec(texat)) !== null) {
         let tempEditor = await document.createElement("div");
          tempEditor.style = "width: 90%; height: 500px; margin: 0 auto; overflow: auto;";
+         tempEditor.id = "nm";
          tempEditor.classList.add('ace_dark', 'ace-rk')
             // console.log(tempEditor);
-        let aceTempEditor = await ace.edit(tempEditor);
-        await aceTempEditor.setValue((match[2]).trim().replace(/\n/g, '*:*nl*:*'));
-       texat = await texat.replace(codeblock, tempEditor.outerHTML)
+        let aceTempEditor = await ace.edit("nm");
+      setInterval(async() => {
+          await aceTempEditor.setValue((match[2]).trim().replace(/\n/g, '*:*nl*:*'));
+          }
+        texat = await texat.replace(codeblock, tempEditor.outerHTML)
      
           //console.log(tempEditor);
         //texat.replace(codeblock, tempEditor.outerHTML);
