@@ -130,13 +130,7 @@
     
   </div>
 <div id="editor" class="" style="width: 90%; margin: 0 auto; height: 70%; overflow: auto;">
-<pre>
-  <code>
-    console.log("js");
-    function ji(){
-      return 0;
-    }
-  </code>
+your output will show here 
 </pre>
   
 </div>
@@ -230,11 +224,7 @@ fetch("https://estatic-node-api.onrender.com/tool-sphere/api/code-gen", {
   behavior: "smooth",
   block: "center",  
 });
- hljs.highlightAll();
-});
-    }
-    
-function detectLanguage(code) {
+ion detectLanguage(code) {
     var result = hljs.highlightAuto(code);
     return result.language;
 }   
@@ -260,9 +250,10 @@ if (localStorage.getItem('cookieConsentAccepted')) {
  
         while ((match = codeblock.exec(texat)) !== null) {
         
-        texat = await texat.replace(codeblock, `<textarea style="width: 90%; height: 500px; margin: 0 auto; color: white;" disabled>${(match[2]).trim().replace(/\n/g, '*:*nl*:*')}</textarea>`)
+        texat = await texat.replace(codeblock, `<pre><code>${(match[2]).trim()}</code></pre>`)
     }  
-   editor.innerHTML = `${texat.replace(/\n/g, "<br>").replace(/\*\:\*nl\*\:\*/g, "\n")}`;
+   editor.innerHTML = `${texat.replace(/\n/g, "<br>")}`;
+    hljs.highlightAll(); 
    }
 
     
