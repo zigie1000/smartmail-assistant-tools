@@ -253,9 +253,9 @@ if (localStorage.getItem('cookieConsentAccepted')) {
  
         while ((match = codeblock.exec(texat)) !== null) {
         
-        texat = await texat.replace(codeblock, `<pre><code>${(match[2]).trim()}</code></pre>`)
+        texat = await texat.replace(codeblock, `<pre><code>${(match[2]).trim().replace(/\n/g, '*:*nl*:*')}</code></pre>`)
     }  
-   editor.innerHTML = `${texat.replace(/\n/g, "<br>")}`;
+   editor.innerHTML = `${texat.replace(/\n/g, "<br>").replace(/\*\:\*nl\*\:\*/g, "\n")}`;}`;
     hljs.highlightAll(); 
    }
 
