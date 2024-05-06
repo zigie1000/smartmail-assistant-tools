@@ -224,7 +224,10 @@ fetch("https://estatic-node-api.onrender.com/tool-sphere/api/code-gen", {
   behavior: "smooth",
   block: "center",  
 });
-ion detectLanguage(code) {
+});
+    }
+
+function detectLanguage(code) {
     var result = hljs.highlightAuto(code);
     return result.language;
 }   
