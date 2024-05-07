@@ -1,5 +1,3 @@
-//create a web server in flask with some usefull routes 
-//Create a Discord bot in JavaScript with commands and events organized into separate files and folders, and provide a clear folder-file structure.
 var suggestions = [
   "Create a web server in flask with some usefull routes",
   "Create a Discord bot in JavaScript with commands and events organized into separate files and folders, and provide a clear folder-file structure.",
@@ -7,8 +5,8 @@ var suggestions = [
   "Build a Beautiful Landing Page in html, css and js also use best colors and styles to make the UI beautiful ",
   "Write a blog post more than 100 words about AI usages and advantages in real life use markdown to style the post and give the markdown code in a snippet",
   "Design and code a mobile-first landing page for a fictional product using Tailwind CSS.",
- /* "",
-  "",
+  "Create a web server in Flask with CRUD (Create, Read, Update, Delete) operations for a simple database.",
+  /*"",
   "",
   "",
   ""*/
