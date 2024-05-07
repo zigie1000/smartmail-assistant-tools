@@ -175,6 +175,9 @@ your output will show here
     <button id="accept-cookies">Accept</button>
     </div>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+  <script type="module">
+  import { marked } from "https://cdn.jsdelivr.net/npm/marked/lib/marked.esm.js";
+  </script>
   <script>
     hljs.highlightAll();
     var btn = document.querySelector("#genbtn");
@@ -246,7 +249,7 @@ if (localStorage.getItem('cookieConsentAccepted')) {
   }
 
    async function parseCodeBlocks(texatt) {
-  const codeblock = /```(?:([a-zA-Z0-9]+)\s*)?([\s\S]+?)```/;
+ /* const codeblock = /```(?:([a-zA-Z0-9]+)\s*)?([\s\S]+?)```/;
   let texat = texatt; //.replace(codeblock, `<pre><code>${(jdkd[2]).replace(/<br>/g, "\n")}</code></pre>`);
     //  editor.innerHTML = `${newtexti}`;
   var match;
@@ -254,8 +257,9 @@ if (localStorage.getItem('cookieConsentAccepted')) {
         while ((match = codeblock.exec(texat)) !== null) {
         
         texat = await texat.replace(codeblock, `<pre><code>${((match[2]).trim()).replace(/\n/g, '*:*nl*:*')}</code></pre>`)
-    }  
-   editor.innerHTML = `${texat.replace(/\n/g, "<br>").replace(/\*\:\*nl\*\:\*/g, "\n")}`;
+    }  */
+  // editor.innerHTML = `${texat.replace(/\n/g, "<br>").replace(/\*\:\*nl\*\:\*/g, "\n")}`;
+    editor.innerHTML = marked.parse(texatt);
     hljs.highlightAll(); 
    }
 
