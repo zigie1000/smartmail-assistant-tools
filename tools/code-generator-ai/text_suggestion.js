@@ -5,7 +5,7 @@ var suggestions = [
   "Create a Discord bot in JavaScript with commands and events organized into separate files and folders, and provide a clear folder-file structure.",
   "Develop a task management application using React.js with features like adding tasks, marking tasks as completed, and filtering tasks based on status and provide a beautiful file-folder structure",
   "Build a Beautiful Landing Page in html, css and js also use best colors and styles to make the UI beautiful ",
-  "Write a blog post more than 200 words about AI usages and advantages in real life use markdown to style the post give it in a snippet",
+  "Write a blog post more than 100 words about AI usages and advantages in real life use markdown to style the post and give the markdown code in a snippet",
   /*"",
   "",
   "",
