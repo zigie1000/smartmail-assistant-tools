@@ -8,8 +8,8 @@ var suggestions = [
   "Create a web server in Flask with CRUD (Create, Read, Update, Delete) operations for a simple database.",
   "Develop a basic weather app that fetches weather data based on user input (city or ZIP code) using an API like OpenWeatherMap.",
   "Build a simple calculator with basic arithmetic operations using HTML, CSS, and JavaScript.",
-  /*"",
-  ""*/
+  "Develop a chat application using sockets to enable real-time messaging between multiple clients connected to a central server in nodeJs.",
+  "Build a quiz game with multiple-choice questions, scoring system, and leaderboard."
   ];
 let randomSuggestion = "";
 function shuffleSuggestion(){
