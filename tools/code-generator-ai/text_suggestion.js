@@ -6,9 +6,9 @@ var suggestions = [
   "Write a blog post more than 100 words about AI usages and advantages in real life use markdown to style the post and give the markdown code in a snippet",
   "Design and code a mobile-first landing page for a fictional product using Tailwind CSS.",
   "Create a web server in Flask with CRUD (Create, Read, Update, Delete) operations for a simple database.",
+  "Develop a basic weather app that fetches weather data based on user input (city or ZIP code) using an API like OpenWeatherMap.",
+  "Build a simple calculator with basic arithmetic operations using HTML, CSS, and JavaScript.",
   /*"",
-  "",
-  "",
   ""*/
   ];
 let randomSuggestion = "";
