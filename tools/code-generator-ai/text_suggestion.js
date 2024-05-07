@@ -2,7 +2,16 @@
 //Create a Discord bot in JavaScript with commands and events organized into separate files and folders, and provide a clear folder-file structure.
 var suggestions = [
   "Create a web server in flask with some usefull routes",
-  "Create a Discord bot in JavaScript with commands and events organized into separate files and folders, and provide a clear folder-file structure."
+  "Create a Discord bot in JavaScript with commands and events organized into separate files and folders, and provide a clear folder-file structure.",
+  "Develop a task management application using React.js with features like adding tasks, marking tasks as completed, and filtering tasks based on status and provide a beautiful file-folder structure",
+  "Build a Beautiful Landing Page in html, css and js also use best colors and styles to make the UI beautiful ",
+  "",
+  "",
+  "",
+  "",
+  "",
+  "",
+  ""
   ];
 let randomSuggestion = "";
 function shuffleSuggestion(){
