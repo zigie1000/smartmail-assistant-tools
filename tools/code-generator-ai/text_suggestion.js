@@ -6,4 +6,4 @@ var suggestions = [
   ];
 var textInp = document.querySelector("#prmpt");
 var randomSuggestion = suggestions[Math.floor(Math.random() * suggestions.length)];
-textInp.placeholder = randomSuggestion;
+textInp.placeholder = randomSuggestion + " \n\n𝙋𝙧𝙚𝙨𝙨 🆃🅰🅱 𝙠𝙚𝙮 𝙩𝙤 𝙪𝙨𝙚 𝙩𝙝𝙞𝙨 𝙨𝙪𝙜𝙜𝙚𝙨𝙩𝙞𝙤𝙣  ";
