@@ -5,11 +5,13 @@ var suggestions = [
   "Create a Discord bot in JavaScript with commands and events organized into separate files and folders, and provide a clear folder-file structure."
   ];
 let randomSuggestion = "";
+function shuffleSuggestion(){
+randomSuggestion = suggestions[Math.floor(Math.random() * suggestions.length)];
+textInp.placeholder = randomSuggestion + " \n\n𝙋𝙧𝙚𝙨𝙨 🅴🅽🆃🅴🆁 𝙠𝙚𝙮 𝙩𝙤 𝙪𝙨𝙚 𝙩𝙝𝙞𝙨 𝙨𝙪𝙜𝙜𝙚𝙨𝙩𝙞𝙤𝙣 \𝙣𝙋𝙧𝙚𝙨𝙨 BackSpace 𝙠𝙚𝙮 𝙩𝙤 𝙨𝙝𝙪𝙛𝙛𝙡𝙚";
+}
 var textInp = document.querySelector("#prmpt");
 textInp.addEventListener("focus", () => {
-randomSuggestion = suggestions[Math.floor(Math.random() * suggestions.length)];
-textInp.placeholder = randomSuggestion + " \n\n𝙋𝙧𝙚𝙨𝙨 🆃🅰🅱 𝙠𝙚𝙮 𝙩𝙤 𝙪𝙨𝙚 𝙩𝙝𝙞𝙨 𝙨𝙪𝙜𝙜𝙚𝙨𝙩𝙞𝙤𝙣 \𝙣𝙋𝙧𝙚𝙨𝙨 🅴🅽🆃🅴🆁 𝙠𝙚𝙮 𝙩𝙤 𝙨𝙝𝙪𝙛𝙛𝙡𝙚";
-});
+shuffleSuggestion()});
 
 // 𝙒𝙧𝙞𝙩𝙚 𝙒𝙝𝙖𝙩 𝙔𝙤𝙪 𝙒𝙖𝙣𝙩 𝙏𝙤 𝙂𝙚𝙣𝙚𝙧𝙖𝙩𝙚
 textInp.addEventListener("blur", () => {
@@ -19,5 +21,7 @@ textInp.placeholder = "𝙒𝙧𝙞𝙩𝙚 𝙒𝙝𝙖𝙩 𝙔𝙤𝙪 𝙒�
 textInp.addEventListener("keydown", (event) => {
 if(event.keyCode === 13 && textInp.value === ""){
 textInp.value = randomSuggestion ?? "";
+}else if(event.keyCode === 8 && textInp.value === ""){
+shuffleSuggestion()
 }
 });
